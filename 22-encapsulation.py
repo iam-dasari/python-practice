@@ -31,3 +31,12 @@ class BankAccount:
 # Creating an object of the BankAccount class
 account = BankAccount("123456789", 1000)
 print(account.get_balance())
+
+
+# How it will be called from outside the class
+account.deposit(500)
+account.withdraw(200)
+print(account.get_balance())
+
+# Intentionally trying to access private attributes (will raise an AttributeError)
+print(account.__balance)  # Uncommenting this line will raise an error
